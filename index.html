@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bithemoth</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="Bithemoth">
+  <meta name="author" content="Bithemoth">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="image/title-icon.png" rel="icon">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
+  <link href="css/responsive.css" rel="stylesheet" type="text/css">
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="landing-section-wrap">
+  <div id="particles-js"></div>
+    <div class="count-particles">
+      <div class="head-logo">
+        <img src="image/logo.png" alt="logo"> </div>
+    </div>
+    <div class="landing-footer">
+      <div class="welcome-page">
+        <h1 class="animated hiding welcome-text"  data-animation="zoomInLeft">WELCOME TO BITHEMOTH THE GREATEST BLOCKCHAIN PLATFORM IN THE WORLD </h1>
+        <div class="welcomt-bttn">
+          <a class=" animated hiding" data-animation="bounceInLeft" href="javascript:void(0);" data-toggle="modal" data-target="#myModal1">JOIN A REVOLUTION</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!--Modal popup video-->
+  <div class="video-popup-wrap">
+    <div class="modal fade" id="myModal1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal">×</button> -->
+          </div>
+          <div class="modal-body">
+            <video width="100%" height="100%" controls>
+              <source src="https://www.youtube.com/watch?v=gk1hea98VHU">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bootstrap.js" type="text/javascript"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  </script>
+</body>
+
+</html>
